@@ -55,18 +55,6 @@ public struct API {
         case sessionToken(String)
         case installationId(String)
 
-        // use HashValue so we can use in a sets
-        public var hashValue: Int {
-            switch self {
-            case .useMasterKey:
-                return 1
-            case .sessionToken:
-                return 2
-            case .installationId:
-                return 3
-            }
-        }
-
         public static func == (lhs: API.Option, rhs: API.Option) -> Bool {
             return lhs.hashValue == rhs.hashValue
         }

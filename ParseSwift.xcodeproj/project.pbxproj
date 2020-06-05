@@ -124,7 +124,6 @@
 		4AC3976F1F48778900DEA9D3 /* ACL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACL.swift; sourceTree = "<group>"; };
 		4AC397711F488F9E00DEA9D3 /* BatchUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchUtils.swift; sourceTree = "<group>"; };
 		4AC397731F488FF900DEA9D3 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		4ACFC2E21F3CA21F0046F3A3 /* ParseSwift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ParseSwift.playground; sourceTree = "<group>"; };
 		4AEBA5481F26519B00628B17 /* AddOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOperation.swift; sourceTree = "<group>"; };
 		4AEBA54A1F2651D900628B17 /* RemoveOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveOperation.swift; sourceTree = "<group>"; };
 		4AEBA54C1F26523800628B17 /* DeleteOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteOperation.swift; sourceTree = "<group>"; };
@@ -269,7 +268,6 @@
 				4AFDA7131F26D9A5002AE4FC /* ParseSwift-macOS */,
 				4AA807591F794242008CD551 /* TestHost */,
 				4AB8B4F51F254AE10070F682 /* Products */,
-				4ACFC2E21F3CA21F0046F3A3 /* ParseSwift.playground */,
 			);
 			sourceTree = "<group>";
 		};
@@ -435,7 +433,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = Parse;
 				TargetAttributes = {
 					4AA807571F794242008CD551 = {
@@ -539,7 +537,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -706,6 +704,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -713,6 +712,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -767,6 +767,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -774,6 +775,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

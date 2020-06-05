@@ -54,10 +54,10 @@ do {
     acl?.publicWrite = true
     loggedIn.ACL = acl
     try loggedIn.save()
-} catch let e {
-    e
-    e.localizedDescription
-    fatalError("\(e.localizedDescription)")
+} catch let err {
+    err
+    err.localizedDescription
+    fatalError("\(err.localizedDescription)")
 }
 
 //var acl = ACL()

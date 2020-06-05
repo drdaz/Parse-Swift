@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:/Users/florent/src/Parse/Parse-Swift/ParseSwift.xcodeproj">
+      location = "container:ParseSwift.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ParseSwift.playground">
    </FileRef>
 </Workspace>

@@ -69,8 +69,9 @@ class KeychainStoreTests: XCTestCase {
         testStore[key] = value
         XCTAssertNil(testStore[bool: key], "Values should be equal after get")
     }
-
-    func testSetComplextObject() {
+/*  drdaz 5 Jun 2020: Commenting this out. It's a pain to support in Swift, and I'm not convinced of the need here. This keystore is a kev / value store anyway.
+     
+     func testSetComplextObject() {
         let complexObject: [Any] = [["key": "value"], "string2", 1234, NSNull()]
         testStore["complexObject"] = complexObject
         guard let retrievedObject: [Any] = testStore["complexObject"] else {
@@ -108,10 +109,10 @@ class KeychainStoreTests: XCTestCase {
             }
         }
     }
-
+*/
     func testRemoveObject() {
         testStore["key1"] = "value1"
-        XCTAssertNotNil(testStore["key1"]!, "The value should be set")
+        XCTAssertNotNil(testStore[string: "key1"]!, "The value should be set")
         _ = testStore.removeObject(forKey: "key1")
         let key1Val: String? = testStore["key1"]
         XCTAssertNil(key1Val, "There should be no value after removal")
@@ -119,7 +120,7 @@ class KeychainStoreTests: XCTestCase {
 
     func testRemoveObjectSubscript() {
         testStore["key1"] = "value1"
-        XCTAssertNotNil(testStore["key1"]!, "The value should be set")
+        XCTAssertNotNil(testStore[string: "key1"]!, "The value should be set")
         testStore[string: "key1"] = nil
         let key1Val: String? = testStore["key1"]
         XCTAssertNil(key1Val, "There should be no value after removal")
@@ -128,8 +129,8 @@ class KeychainStoreTests: XCTestCase {
     func testRemoveAllObjects() {
         testStore["key1"] = "value1"
         testStore["key2"] = "value2"
-        XCTAssertNotNil(testStore["key1"]!, "The value should be set")
-        XCTAssertNotNil(testStore["key2"]!, "The value should be set")
+        XCTAssertNotNil(testStore[string: "key1"]!, "The value should be set")
+        XCTAssertNotNil(testStore[string: "key2"]!, "The value should be set")
         _ = testStore.removeAllObjects()
         let key1Val: String? = testStore["key1"]
         let key2Val: String? = testStore["key1"]
